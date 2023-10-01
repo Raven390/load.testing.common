@@ -74,47 +74,48 @@ public final class LoadTestingStart {
   static {
     java.lang.String[] descriptorData = {
       "\n\026LoadTestingStart.proto\0221ru.develonica." +
-      "load.testing.common.model.generated\"\302\002\n\027" +
+      "load.testing.common.model.generated\"\206\003\n\027" +
       "LoadTestingStartRequest\022\020\n\010duration\030\001 \001(" +
       "\t\022\030\n\020parallelRequests\030\002 \001(\005\022I\n\006method\030\003 " +
       "\001(\01629.ru.develonica.load.testing.common." +
       "model.generated.Method\022\013\n\003url\030\004 \001(\t\022\014\n\004b" +
       "ody\030\005 \001(\t\022f\n\006header\030\006 \003(\0132V.ru.develonic" +
       "a.load.testing.common.model.generated.Lo" +
-      "adTestingStartRequest.HeaderEntry\032-\n\013Hea" +
-      "derEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\"v\n\030LoadTestingStartResponse\022I\n\006status\030\001" +
-      " \001(\01629.ru.develonica.load.testing.common" +
-      ".model.generated.Status\022\017\n\007message\030\002 \001(\t" +
-      "\"\205\003\n\007Metrics\022d\n\rcodesReceived\030\001 \003(\0132M.ru" +
-      ".develonica.load.testing.common.model.ge" +
-      "nerated.Metrics.CodesReceivedEntry\022d\n\rme" +
-      "moryMetrics\030\002 \003(\0132M.ru.develonica.load.t" +
-      "esting.common.model.generated.Metrics.Me" +
-      "moryMetricsEntry\0324\n\022CodesReceivedEntry\022\013" +
-      "\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(\003:\0028\001\032x\n\022Memory" +
-      "MetricsEntry\022\013\n\003key\030\001 \001(\t\022Q\n\005value\030\002 \001(\013" +
-      "2B.ru.develonica.load.testing.common.mod" +
-      "el.generated.TimeBasedMetric:\0028\001\"l\n\017Time" +
-      "BasedMetric\022Y\n\nmetricsMap\030\001 \003(\0132E.ru.dev" +
-      "elonica.load.testing.common.model.genera" +
-      "ted.TimeBasedMetricMap\"\240\001\n\022TimeBasedMetr" +
-      "icMap\022]\n\004data\030\001 \003(\0132O.ru.develonica.load" +
-      ".testing.common.model.generated.TimeBase" +
-      "dMetricMap.DataEntry\032+\n\tDataEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\003:\0028\001\"\007\n\005Empty*]\n\006Me" +
-      "thod\022\007\n\003GET\020\000\022\010\n\004HEAD\020\001\022\010\n\004POST\020\002\022\007\n\003PUT" +
-      "\020\003\022\t\n\005PATCH\020\004\022\n\n\006DELETE\020\005\022\013\n\007OPTIONS\020\006\022\t" +
-      "\n\005TRACE\020\007* \n\006Status\022\013\n\007STARTED\020\000\022\t\n\005ERRO" +
-      "R\020\0012\270\002\n\022LoadTestingService\022\240\001\n\005start\022J.r" +
-      "u.develonica.load.testing.common.model.g" +
-      "enerated.LoadTestingStartRequest\032K.ru.de" +
+      "adTestingStartRequest.HeaderEntry\022\024\n\007jmx" +
+      "Host\030\007 \001(\tH\000\210\001\001\022\024\n\007jmxPort\030\010 \001(\005H\001\210\001\001\032-\n" +
+      "\013HeaderEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001B\n\n\010_jmxHostB\n\n\010_jmxPort\"v\n\030LoadTest" +
+      "ingStartResponse\022I\n\006status\030\001 \001(\01629.ru.de" +
       "velonica.load.testing.common.model.gener" +
-      "ated.LoadTestingStartResponse\022\177\n\007metrics" +
-      "\0228.ru.develonica.load.testing.common.mod" +
-      "el.generated.Empty\032:.ru.develonica.load." +
-      "testing.common.model.generated.MetricsB\002" +
-      "P\001b\006proto3"
+      "ated.Status\022\017\n\007message\030\002 \001(\t\"\205\003\n\007Metrics" +
+      "\022d\n\rcodesReceived\030\001 \003(\0132M.ru.develonica." +
+      "load.testing.common.model.generated.Metr" +
+      "ics.CodesReceivedEntry\022d\n\rmemoryMetrics\030" +
+      "\002 \003(\0132M.ru.develonica.load.testing.commo" +
+      "n.model.generated.Metrics.MemoryMetricsE" +
+      "ntry\0324\n\022CodesReceivedEntry\022\013\n\003key\030\001 \001(\005\022" +
+      "\r\n\005value\030\002 \001(\003:\0028\001\032x\n\022MemoryMetricsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022Q\n\005value\030\002 \001(\0132B.ru.develo" +
+      "nica.load.testing.common.model.generated" +
+      ".TimeBasedMetric:\0028\001\"l\n\017TimeBasedMetric\022" +
+      "Y\n\nmetricsMap\030\001 \003(\0132E.ru.develonica.load" +
+      ".testing.common.model.generated.TimeBase" +
+      "dMetricMap\"\240\001\n\022TimeBasedMetricMap\022]\n\004dat" +
+      "a\030\001 \003(\0132O.ru.develonica.load.testing.com" +
+      "mon.model.generated.TimeBasedMetricMap.D" +
+      "ataEntry\032+\n\tDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\003:\0028\001\"\007\n\005Empty*]\n\006Method\022\007\n\003GET\020" +
+      "\000\022\010\n\004HEAD\020\001\022\010\n\004POST\020\002\022\007\n\003PUT\020\003\022\t\n\005PATCH\020" +
+      "\004\022\n\n\006DELETE\020\005\022\013\n\007OPTIONS\020\006\022\t\n\005TRACE\020\007* \n" +
+      "\006Status\022\013\n\007STARTED\020\000\022\t\n\005ERROR\020\0012\270\002\n\022Load" +
+      "TestingService\022\240\001\n\005start\022J.ru.develonica" +
+      ".load.testing.common.model.generated.Loa" +
+      "dTestingStartRequest\032K.ru.develonica.loa" +
+      "d.testing.common.model.generated.LoadTes" +
+      "tingStartResponse\022\177\n\007metrics\0228.ru.develo" +
+      "nica.load.testing.common.model.generated" +
+      ".Empty\032:.ru.develonica.load.testing.comm" +
+      "on.model.generated.MetricsB\002P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -125,7 +126,7 @@ public final class LoadTestingStart {
     internal_static_ru_develonica_load_testing_common_model_generated_LoadTestingStartRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ru_develonica_load_testing_common_model_generated_LoadTestingStartRequest_descriptor,
-        new java.lang.String[] { "Duration", "ParallelRequests", "Method", "Url", "Body", "Header", });
+        new java.lang.String[] { "Duration", "ParallelRequests", "Method", "Url", "Body", "Header", "JmxHost", "JmxPort", "JmxHost", "JmxPort", });
     internal_static_ru_develonica_load_testing_common_model_generated_LoadTestingStartRequest_HeaderEntry_descriptor =
       internal_static_ru_develonica_load_testing_common_model_generated_LoadTestingStartRequest_descriptor.getNestedTypes().get(0);
     internal_static_ru_develonica_load_testing_common_model_generated_LoadTestingStartRequest_HeaderEntry_fieldAccessorTable = new

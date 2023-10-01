@@ -11,6 +11,8 @@ message LoadTestingStartRequest {
   string url = 4;
   string  body = 5;
   map<string, string> header = 6;
+  optional string jmxHost = 7;
+  optional int32 jmxPort = 8;
 }
 
 message LoadTestingStartResponse {
