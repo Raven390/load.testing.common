@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     method_ = 0;
     url_ = "";
     body_ = "";
+    jmxHost_ = "";
   }
 
   @java.lang.Override
@@ -59,6 +60,7 @@ private static final long serialVersionUID = 0L;
             ru.develonica.load.testing.common.model.generated.LoadTestingStartRequest.class, ru.develonica.load.testing.common.model.generated.LoadTestingStartRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int DURATION_FIELD_NUMBER = 1;
   private volatile java.lang.Object duration_;
   /**
@@ -284,6 +286,71 @@ private static final long serialVersionUID = 0L;
     return map.get(key);
   }
 
+  public static final int JMXHOST_FIELD_NUMBER = 7;
+  private volatile java.lang.Object jmxHost_;
+  /**
+   * <code>optional string jmxHost = 7;</code>
+   * @return Whether the jmxHost field is set.
+   */
+  @java.lang.Override
+  public boolean hasJmxHost() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>optional string jmxHost = 7;</code>
+   * @return The jmxHost.
+   */
+  @java.lang.Override
+  public java.lang.String getJmxHost() {
+    java.lang.Object ref = jmxHost_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      jmxHost_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string jmxHost = 7;</code>
+   * @return The bytes for jmxHost.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getJmxHostBytes() {
+    java.lang.Object ref = jmxHost_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      jmxHost_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int JMXPORT_FIELD_NUMBER = 8;
+  private int jmxPort_;
+  /**
+   * <code>optional int32 jmxPort = 8;</code>
+   * @return Whether the jmxPort field is set.
+   */
+  @java.lang.Override
+  public boolean hasJmxPort() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <code>optional int32 jmxPort = 8;</code>
+   * @return The jmxPort.
+   */
+  @java.lang.Override
+  public int getJmxPort() {
+    return jmxPort_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -319,6 +386,12 @@ private static final long serialVersionUID = 0L;
         internalGetHeader(),
         HeaderDefaultEntryHolder.defaultEntry,
         6);
+    if (((bitField0_ & 0x00000001) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, jmxHost_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeInt32(8, jmxPort_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -355,6 +428,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, header__);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, jmxHost_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(8, jmxPort_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -381,6 +461,16 @@ private static final long serialVersionUID = 0L;
         .equals(other.getBody())) return false;
     if (!internalGetHeader().equals(
         other.internalGetHeader())) return false;
+    if (hasJmxHost() != other.hasJmxHost()) return false;
+    if (hasJmxHost()) {
+      if (!getJmxHost()
+          .equals(other.getJmxHost())) return false;
+    }
+    if (hasJmxPort() != other.hasJmxPort()) return false;
+    if (hasJmxPort()) {
+      if (getJmxPort()
+          != other.getJmxPort()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -405,6 +495,14 @@ private static final long serialVersionUID = 0L;
     if (!internalGetHeader().getMap().isEmpty()) {
       hash = (37 * hash) + HEADER_FIELD_NUMBER;
       hash = (53 * hash) + internalGetHeader().hashCode();
+    }
+    if (hasJmxHost()) {
+      hash = (37 * hash) + JMXHOST_FIELD_NUMBER;
+      hash = (53 * hash) + getJmxHost().hashCode();
+    }
+    if (hasJmxPort()) {
+      hash = (37 * hash) + JMXPORT_FIELD_NUMBER;
+      hash = (53 * hash) + getJmxPort();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -567,6 +665,10 @@ private static final long serialVersionUID = 0L;
       body_ = "";
 
       internalGetMutableHeader().clear();
+      jmxHost_ = "";
+      bitField0_ = (bitField0_ & ~0x00000002);
+      jmxPort_ = 0;
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -594,6 +696,7 @@ private static final long serialVersionUID = 0L;
     public ru.develonica.load.testing.common.model.generated.LoadTestingStartRequest buildPartial() {
       ru.develonica.load.testing.common.model.generated.LoadTestingStartRequest result = new ru.develonica.load.testing.common.model.generated.LoadTestingStartRequest(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.duration_ = duration_;
       result.parallelRequests_ = parallelRequests_;
       result.method_ = method_;
@@ -601,6 +704,15 @@ private static final long serialVersionUID = 0L;
       result.body_ = body_;
       result.header_ = internalGetHeader();
       result.header_.makeImmutable();
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        to_bitField0_ |= 0x00000001;
+      }
+      result.jmxHost_ = jmxHost_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.jmxPort_ = jmxPort_;
+        to_bitField0_ |= 0x00000002;
+      }
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -669,6 +781,14 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableHeader().mergeFrom(
           other.internalGetHeader());
+      if (other.hasJmxHost()) {
+        bitField0_ |= 0x00000002;
+        jmxHost_ = other.jmxHost_;
+        onChanged();
+      }
+      if (other.hasJmxPort()) {
+        setJmxPort(other.getJmxPort());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -728,6 +848,16 @@ private static final long serialVersionUID = 0L;
                   header__.getKey(), header__.getValue());
               break;
             } // case 50
+            case 58: {
+              jmxHost_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 58
+            case 64: {
+              jmxPort_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1186,6 +1316,128 @@ private static final long serialVersionUID = 0L;
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableHeader().getMutableMap()
           .putAll(values);
+      return this;
+    }
+
+    private java.lang.Object jmxHost_ = "";
+    /**
+     * <code>optional string jmxHost = 7;</code>
+     * @return Whether the jmxHost field is set.
+     */
+    public boolean hasJmxHost() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string jmxHost = 7;</code>
+     * @return The jmxHost.
+     */
+    public java.lang.String getJmxHost() {
+      java.lang.Object ref = jmxHost_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jmxHost_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string jmxHost = 7;</code>
+     * @return The bytes for jmxHost.
+     */
+    public com.google.protobuf.ByteString
+        getJmxHostBytes() {
+      java.lang.Object ref = jmxHost_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jmxHost_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string jmxHost = 7;</code>
+     * @param value The jmxHost to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJmxHost(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      jmxHost_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string jmxHost = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearJmxHost() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      jmxHost_ = getDefaultInstance().getJmxHost();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string jmxHost = 7;</code>
+     * @param value The bytes for jmxHost to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJmxHostBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      bitField0_ |= 0x00000002;
+      jmxHost_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int jmxPort_ ;
+    /**
+     * <code>optional int32 jmxPort = 8;</code>
+     * @return Whether the jmxPort field is set.
+     */
+    @java.lang.Override
+    public boolean hasJmxPort() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional int32 jmxPort = 8;</code>
+     * @return The jmxPort.
+     */
+    @java.lang.Override
+    public int getJmxPort() {
+      return jmxPort_;
+    }
+    /**
+     * <code>optional int32 jmxPort = 8;</code>
+     * @param value The jmxPort to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJmxPort(int value) {
+      bitField0_ |= 0x00000004;
+      jmxPort_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 jmxPort = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearJmxPort() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      jmxPort_ = 0;
+      onChanged();
       return this;
     }
     @java.lang.Override

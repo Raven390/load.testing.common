@@ -95,4 +95,32 @@ java.lang.String defaultValue);
 
   java.lang.String getHeaderOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>optional string jmxHost = 7;</code>
+   * @return Whether the jmxHost field is set.
+   */
+  boolean hasJmxHost();
+  /**
+   * <code>optional string jmxHost = 7;</code>
+   * @return The jmxHost.
+   */
+  java.lang.String getJmxHost();
+  /**
+   * <code>optional string jmxHost = 7;</code>
+   * @return The bytes for jmxHost.
+   */
+  com.google.protobuf.ByteString
+      getJmxHostBytes();
+
+  /**
+   * <code>optional int32 jmxPort = 8;</code>
+   * @return Whether the jmxPort field is set.
+   */
+  boolean hasJmxPort();
+  /**
+   * <code>optional int32 jmxPort = 8;</code>
+   * @return The jmxPort.
+   */
+  int getJmxPort();
 }
