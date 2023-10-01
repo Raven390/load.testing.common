@@ -6,7 +6,7 @@ Common components for load testing project
 protoc --plugin=protoc-gen-grpc-java={ABSOLUTE_PATH}\load.testing.common\schema\protoc-gen-grpc-java-1.58.0-windows-x86_64.exe -I={ABSOLUTE_PATH}\load.testing.common\schema --java_out={ABSOLUTE_PATH}\load.testing.common\src\main\java --grpc-java_out={ABSOLUTE_PATH}\load.testing.common\src\main\java {ABSOLUTE_PATH}\load.testing.common\schema\LoadTestingStart.proto
 ```
 
-### Подключение зависимости к проектам web и runner
+### Подключение зависимости к проектам web и runner при внесении изменений
 1) Выполнить шаги Maven `clean package`
 2) Добавить в целевой проект зависимость:
 ```xml
