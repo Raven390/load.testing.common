@@ -19,12 +19,17 @@ public interface LoadTestingStartResponseOrBuilder extends
   ru.develonica.load.testing.common.model.generated.Status getStatus();
 
   /**
-   * <code>string message = 2;</code>
+   * <code>optional string message = 2;</code>
+   * @return Whether the message field is set.
+   */
+  boolean hasMessage();
+  /**
+   * <code>optional string message = 2;</code>
    * @return The message.
    */
   java.lang.String getMessage();
   /**
-   * <code>string message = 2;</code>
+   * <code>optional string message = 2;</code>
    * @return The bytes for message.
    */
   com.google.protobuf.ByteString

@@ -17,7 +17,7 @@ message LoadTestingStartRequest {
 
 message LoadTestingStartResponse {
   Status status = 1;
-  string message = 2;
+  optional string message = 2;
 }
 
 message Metrics {

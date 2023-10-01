@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
             ru.develonica.load.testing.common.model.generated.LoadTestingStartResponse.class, ru.develonica.load.testing.common.model.generated.LoadTestingStartResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int STATUS_FIELD_NUMBER = 1;
   private int status_;
   /**
@@ -67,7 +68,15 @@ private static final long serialVersionUID = 0L;
   public static final int MESSAGE_FIELD_NUMBER = 2;
   private volatile java.lang.Object message_;
   /**
-   * <code>string message = 2;</code>
+   * <code>optional string message = 2;</code>
+   * @return Whether the message field is set.
+   */
+  @java.lang.Override
+  public boolean hasMessage() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>optional string message = 2;</code>
    * @return The message.
    */
   @java.lang.Override
@@ -84,7 +93,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string message = 2;</code>
+   * <code>optional string message = 2;</code>
    * @return The bytes for message.
    */
   @java.lang.Override
@@ -119,7 +128,7 @@ private static final long serialVersionUID = 0L;
     if (status_ != ru.develonica.load.testing.common.model.generated.Status.STARTED.getNumber()) {
       output.writeEnum(1, status_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
     }
     getUnknownFields().writeTo(output);
@@ -135,7 +144,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, status_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
     }
     size += getUnknownFields().getSerializedSize();
@@ -154,8 +163,11 @@ private static final long serialVersionUID = 0L;
     ru.develonica.load.testing.common.model.generated.LoadTestingStartResponse other = (ru.develonica.load.testing.common.model.generated.LoadTestingStartResponse) obj;
 
     if (status_ != other.status_) return false;
-    if (!getMessage()
-        .equals(other.getMessage())) return false;
+    if (hasMessage() != other.hasMessage()) return false;
+    if (hasMessage()) {
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -169,8 +181,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
-    hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
-    hash = (53 * hash) + getMessage().hashCode();
+    if (hasMessage()) {
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -302,7 +316,7 @@ private static final long serialVersionUID = 0L;
       status_ = 0;
 
       message_ = "";
-
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -329,8 +343,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ru.develonica.load.testing.common.model.generated.LoadTestingStartResponse buildPartial() {
       ru.develonica.load.testing.common.model.generated.LoadTestingStartResponse result = new ru.develonica.load.testing.common.model.generated.LoadTestingStartResponse(this);
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.status_ = status_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        to_bitField0_ |= 0x00000001;
+      }
       result.message_ = message_;
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -382,7 +402,8 @@ private static final long serialVersionUID = 0L;
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
-      if (!other.getMessage().isEmpty()) {
+      if (other.hasMessage()) {
+        bitField0_ |= 0x00000001;
         message_ = other.message_;
         onChanged();
       }
@@ -419,7 +440,7 @@ private static final long serialVersionUID = 0L;
             } // case 8
             case 18: {
               message_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 18
             default: {
@@ -437,6 +458,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int status_ = 0;
     /**
@@ -494,7 +516,14 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object message_ = "";
     /**
-     * <code>string message = 2;</code>
+     * <code>optional string message = 2;</code>
+     * @return Whether the message field is set.
+     */
+    public boolean hasMessage() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string message = 2;</code>
      * @return The message.
      */
     public java.lang.String getMessage() {
@@ -510,7 +539,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string message = 2;</code>
+     * <code>optional string message = 2;</code>
      * @return The bytes for message.
      */
     public com.google.protobuf.ByteString
@@ -527,7 +556,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string message = 2;</code>
+     * <code>optional string message = 2;</code>
      * @param value The message to set.
      * @return This builder for chaining.
      */
@@ -536,23 +565,23 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000001;
       message_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string message = 2;</code>
+     * <code>optional string message = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearMessage() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       message_ = getDefaultInstance().getMessage();
       onChanged();
       return this;
     }
     /**
-     * <code>string message = 2;</code>
+     * <code>optional string message = 2;</code>
      * @param value The bytes for message to set.
      * @return This builder for chaining.
      */
@@ -562,7 +591,7 @@ private static final long serialVersionUID = 0L;
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-      
+      bitField0_ |= 0x00000001;
       message_ = value;
       onChanged();
       return this;
