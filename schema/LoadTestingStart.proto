@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package ru.develonica.load.testing.common.model.generated;
+
+message LoadTestingStartRequest {
+  string duration = 1;
+  int32 parallelRequests = 2;
+  Method method = 3;
+  string url = 4;
+  string  body = 5;
+  map<string, string> header = 6;
+}
+
+message LoadTestingStartResponse {
+  Status status = 1;
+  string message = 2;
+}
+
+message Metrics {
+  map<int32, int64> codesReceived = 1;
+  map<string, TimeBasedMetric> memoryMetrics = 2;
+}
+
+
+message TimeBasedMetric {
+  repeated TimeBasedMetricMap metricsMap = 1;
+}
+
+message TimeBasedMetricMap {
+  map<string, int64> data = 1;
+}
+
+message Empty {}
+
+enum Method {
+  GET = 0;
+  HEAD = 1;
+  POST = 2;
+  PUT = 3;
+  PATCH = 4;
+  DELETE = 5;
+  OPTIONS = 6;
+  TRACE = 7;
+}
+
+enum Status {
+  STARTED = 0;
+  ERROR = 1;
+}
+
+service LoadTestingService {
+  rpc start(LoadTestingStartRequest) returns (LoadTestingStartResponse);
+  rpc metrics(Empty) returns (Metrics);
+}
